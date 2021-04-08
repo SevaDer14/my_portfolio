@@ -66,3 +66,34 @@ describe("User can navigate the app", () => {
     })
   })
 })
+
+describe("User can see a linst of projects", () => {
+  beforeEach(() => {
+    cy.visit('http://localhost:3000')
+    cy.get('#projects-tab').click()
+  })
+
+  it("displays the first project", () => {
+    cy.get("#project-1").within(() => {
+      cy.get(".image").should("exist")
+      cy.get(".header").should("contain", "My First Website")
+      cy.get(".description").should("contain", "Was practicing some HTML and CSS during the prep course")
+    })
+  })
+
+  it("displays the second project", () => {
+    cy.get("#project-2").within(() => {
+      cy.get(".image").should("exist")
+      cy.get(".header").should("contain", "ATM Challenge")
+      cy.get(".description").should("contain", "Practiced making backend application in Ruby during the week 1")
+    })
+  })
+
+  it("displays the third project", () => {
+    cy.get("#project-3").within(() => {
+      cy.get(".image").should("exist")
+      cy.get(".header").should("contain", "Library Challenge")
+      cy.get(".description").should("contain", "Practiced making backend application in Ruby during the week 1")
+    })
+  })
+})
