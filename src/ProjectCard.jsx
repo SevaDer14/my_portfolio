@@ -1,8 +1,6 @@
 import React from "react"
 import { Card, Image } from "semantic-ui-react"
 
-import firstWebsite from "./public/img/my_first_website.png"
-
 
 const ProjectCard = ({ project }) => {
   return (

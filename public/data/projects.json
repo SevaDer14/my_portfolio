@@ -2,19 +2,19 @@
   {
     "id": 1,
     "name": "My First Website",
-    "image": "./public/img/my_first_website.png",
+    "image": "/img/my_first_website.png",
     "description": "Was practicing some HTML and CSS during the prep course"
   },
   {
     "id": 2,
     "name": "ATM Challenge",
-    "image": "https://www.paymentscardsandmobile.com/wp-content/uploads/2016/01/ATM-Machine-270x300.jpg",
+    "image": "/img/atm.jpg",
     "description": "Practiced making backend application in Ruby during the week 1"
   },
   {
     "id": 3,
     "name": "Library Challenge",
-    "image": "https://www.marinmuseum.se/globalassets/marinmuseum/bilder/samlingar/bibliotek/bibliotekarie-haller-i-bok-1000x666.jpg",
+    "image": "/img/library.jpg",
     "description": "Practiced making backend application in Ruby during the week 1"
   }
 ]
