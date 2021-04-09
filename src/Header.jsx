@@ -5,13 +5,7 @@ import { Menu, Segment } from "semantic-ui-react";
 const Header = () => {
   return (
     <Segment>
-      <Menu secondary>
-        <Menu.Item 
-          id="header"
-          name="SEVA DERIUSHKIN"
-          as={Link}
-          to={{ pathname: '/' }}
-        />
+      <Menu secondary>        
         <Menu.Item 
           id="about-tab"
           name="about me"

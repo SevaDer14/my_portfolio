@@ -3,18 +3,16 @@
     "id": 1,
     "name": "My First Website",
     "image": "/img/my_first_website.png",
-    "description": "Was practicing some HTML and CSS during the prep course"
-  },
+    "description": "Was practicing some HTML and CSS during the prep course",
+    "weblink": "https://sevader14.github.io/",
+    "github": "https://github.com/SevaDer14/sevader14.github.io"
+  },  
   {
     "id": 2,
-    "name": "ATM Challenge",
-    "image": "/img/atm.jpg",
-    "description": "Practiced making backend application in Ruby during the week 1"
-  },
-  {
-    "id": 3,
     "name": "Library Challenge",
     "image": "/img/library.jpg",
-    "description": "Practiced making backend application in Ruby during the week 1"
+    "description": "Practiced making backend application in Ruby during the week 1",
+    "weblink": "",
+    "github": "https://github.com/SevaDer14/library-challenge"
   }
 ]
