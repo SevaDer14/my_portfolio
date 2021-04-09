@@ -27,8 +27,8 @@ class Projects extends Component {
     
     return (
       <Container>
-        <h1 id="projects-header">My Projects</h1>
-        <Grid>{projectsList}</Grid>
+        <h1 style={{marginBottom: '50px'}} id="projects-header">My Projects</h1>
+        <Grid centered>{projectsList}</Grid>
       </Container>
     )  
   }  
