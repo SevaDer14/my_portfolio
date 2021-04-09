@@ -5,7 +5,7 @@ import { Menu, Segment} from "semantic-ui-react";
 
 const Header = () => {
   return (
-    <Segment inverted textAlign='center' color='violet'>
+    <Segment basic inverted textAlign='center' color='blue'>
       <div style={{padding: '10px'}}>
         <h1 id='my-name' name='seva-deriushkin' style={{fontSize: '38px'}}>
           SEVA DERIUSHKIN
@@ -21,7 +21,7 @@ const Header = () => {
         />
         <Menu.Item 
           id="projects-tab"
-          name="my portfolio"
+          name="my projects"
           as={NavLink}
           to={{ pathname: '/projects' }}
         />

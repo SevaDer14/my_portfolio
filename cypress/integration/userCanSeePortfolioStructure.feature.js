@@ -1,19 +1,64 @@
 describe("Portfolio interface", () => {
-  it("successfully renders", () => {
+  it("successfully renders and redirects to About page", () => {
     cy.visit("http://localhost:3000");
-    cy.get("#header").should("contain", "SEVA DERIUSHKIN");
-    cy.get("#footer").should("contain", "Made with React 17.0.2");
-    cy.get("#hello").should("contain", "Hello World");
+    cy.url().should('contain','about')
+    cy.get("#my-name").should("contain", "SEVA DERIUSHKIN");
+    cy.get("#footer").should("contain", "Made with Semantic UI for React 17.0.2");
+    cy.get("#about-header").should("contain", "About Me");
   });
 });
 
 describe("User can navigate the app", () => {
-  beforeEach(() => {
+  before(() => {
     cy.visit("http://localhost:3000")
+  })  
+
+  describe("to My Projects tab and it", () => {
+    before(() => {
+      cy.get("#projects-tab").click()
+    })
+
+    it("changes url", () => {
+      cy.url().should('contain','projects')
+    });
+  
+    it("displays My Projects header", () => {
+      cy.get("#projects-header").should("contain", "My Projects");
+    });
+
+    it("does not display About Me header", () => {
+      cy.get("#about-header").should("not.exist");
+    });
+
+    it("does not display My CV", () => {
+      cy.get("#cv-header").should("not.exist");
+    });
+  });
+
+  describe("to My CV tab and it", () => {
+    before(() => {
+      cy.get("#cv-tab").click()
+    })
+
+    it("changes url", () => {
+      cy.url().should('contain','cv')
+    });
+  
+    it("displays Hello World", () => {
+      cy.get("#cv-header").should("contain", "My CV");
+    })
+
+    it("does not display About Me header", () => {
+      cy.get("#about-header").should("not.exist");
+    })
+
+    it("does not display Hello world", () => {
+      cy.get("#projects-header").should("not.exist");
+    })
   })
 
-  describe("to About tab and it", () => {
-    beforeEach(() => {
+  describe("Back to About tab and it", () => {
+    before(() => {
       cy.get("#about-tab").click()
     })
   
@@ -26,49 +71,31 @@ describe("User can navigate the app", () => {
     })
 
     it("does not display Hello world", () => {
-      cy.get("#hello").should("not.exist");
+      cy.get("#cv-header").should("not.exist");
     })
+
+    it("has a picture", () => {
+      cy.get("#photo-of-me").should("exist")
+    })    
   });
+})
 
-  describe("to My Projects tab and it", () => {
-    beforeEach(() => {
-      cy.get("#projects-tab").click()
-    })
-  
-    it("displays My Projects header", () => {
-      cy.get("#projects-header").should("contain", "My Projects");
-    });
+describe('About Me page is properly formatted:', () => {
+  before(() => {
+    cy.visit("http://localhost:3000")
+  })
 
-    it("does not display About Me header", () => {
-      cy.get("#about-header").should("not.exist");
-    });
+  it("has a picture of me", () => {
+    cy.get("#photo-of-me").should("exist")
+  })
 
-    it("does not display Hello world", () => {
-      cy.get("#hello").should("not.exist");
-    });
-  });
-
-  describe("to Hello World tab and it", () => {
-    beforeEach(() => {
-      cy.get("#hello").click()
-    })
-  
-    it("displays Hello World", () => {
-      cy.get("#hello").should("contain", "Hello World");
-    })
-
-    it("does not display About Me header", () => {
-      cy.get("#about-header").should("not.exist");
-    })
-
-    it("does not display Hello world", () => {
-      cy.get("#projects-header").should("not.exist");
-    })
+  it("has a description", () => {
+    cy.get("#about-me-paragraph").should("exist")
   })
 })
 
-describe("User can see a linst of projects", () => {
-  beforeEach(() => {
+describe("User can see a list of projects", () => {
+  before(() => {
     cy.visit('http://localhost:3000')
     cy.get('#projects-tab').click()
   })
@@ -78,22 +105,56 @@ describe("User can see a linst of projects", () => {
       cy.get(".image").should("exist")
       cy.get(".header").should("contain", "My First Website")
       cy.get(".description").should("contain", "Was practicing some HTML and CSS during the prep course")
+      cy.get("#buttonWeblink").should("contain", "Website")
+      cy.get("#buttonGithub").should("contain", "Github")      
     })
   })
 
   it("displays the second project", () => {
     cy.get("#project-2").within(() => {
       cy.get(".image").should("exist")
-      cy.get(".header").should("contain", "ATM Challenge")
-      cy.get(".description").should("contain", "Practiced making backend application in Ruby during the week 1")
+      cy.get(".header").should("contain", "Impossible FizzBuzz")
+      cy.get(".description").should("contain", "Play FizzBuzz against computer. Answer time is limited so don't think for too long.")
+      cy.get("#buttonGithub").should("contain", "Github") 
     })
   })
 
   it("displays the third project", () => {
     cy.get("#project-3").within(() => {
       cy.get(".image").should("exist")
-      cy.get(".header").should("contain", "Library Challenge")
-      cy.get(".description").should("contain", "Practiced making backend application in Ruby during the week 1")
+      cy.get(".header").should("contain", "Address Book")
+      cy.get(".description").should("contain", "Simple app that lets you to save contacts. Practiced working with LocalStorage")
+      cy.get("#buttonGithub").should("contain", "Github")
+      cy.get("#buttonWeblink").should("contain", "Website")
     })
   })
+
+  it("displays the fourth project", () => {
+    cy.get("#project-4").within(() => {
+      cy.get(".image").should("exist")
+      cy.get(".header").should("contain", "BMI Calculator")
+      cy.get(".description").should("contain", "App that lets you calculate your BMI and returns your health status")
+      cy.get("#buttonGithub").should("contain", "Github")      
+    })
+  })
+
+  it("displays the fifth project", () => {
+    cy.get("#project-5").within(() => {
+      cy.get(".image").should("exist")
+      cy.get(".header").should("contain", "Library Challenge")
+      cy.get(".description").should("contain", "Practiced making backend application in Ruby during the week 1 of Bootcamp")
+      cy.get("#buttonGithub").should("contain", "Github")      
+    })
+  })
+
+  it("displays the sixth project", () => {
+    cy.get("#project-6").within(() => {
+      cy.get(".image").should("exist")
+      cy.get(".header").should("contain", "ATM Challenge")
+      cy.get(".description").should("contain", "Practiced making backend application in Ruby during the week 1 of Bootcamp")
+      cy.get("#buttonGithub").should("contain", "Github")      
+    })
+  })
+
+
 })
