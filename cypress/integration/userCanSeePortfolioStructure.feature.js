@@ -155,6 +155,52 @@ describe("User can see a list of projects", () => {
       cy.get("#buttonGithub").should("contain", "Github")      
     })
   })
-
-
 })
+
+describe('Buttons on Project Cards link to external resources', () => {
+  before(() => {
+    cy.visit('http://localhost:3000')
+    cy.get('#projects-tab').click()
+  })
+
+  it('checks the first projects links', () => {
+    cy.get("#project-1").within(() => {
+      cy.get("#buttonGithub").should('have.attr','href').and('equal','https://github.com/SevaDer14/sevader14.github.io')
+      cy.get("#buttonWeblink").should('have.attr','href').and('equal','https://sevader14.github.io/')   
+    })
+  })
+  
+  it('checks the second projects links', () => {
+    cy.get("#project-2").within(() => {
+      cy.get("#buttonGithub").should('have.attr','href').and('equal',"https://github.com/SevaDer14/fizz_buzz")        
+    })
+  }) 
+
+  it('checks the third projects links', () => {
+    cy.get("#project-3").within(() => {
+      cy.get("#buttonGithub").should('have.attr','href').and('equal',"https://github.com/SevaDer14/address_book/tree/master")
+      cy.get("#buttonWeblink").should('have.attr','href').and('equal',"https://sevader14-address-book.netlify.app/")   
+    })
+  }) 
+
+  it('checks the fourth projects links', () => {
+    cy.get("#project-4").within(() => {
+      cy.get("#buttonGithub").should('have.attr','href').and('equal',"https://github.com/SevaDer14/bmi_calculator/tree/functionality")        
+    })
+  }) 
+
+  it('checks the fifth projects links', () => {
+    cy.get("#project-5").within(() => {
+      cy.get("#buttonGithub").should('have.attr','href').and('equal',"https://github.com/SevaDer14/library-challenge")        
+    })
+  }) 
+
+  it('checks the sixth projects links', () => {
+    cy.get("#project-6").within(() => {
+      cy.get("#buttonGithub").should('have.attr','href').and('equal',"https://github.com/SevaDer14/library-challenge")        
+    })
+  }) 
+})
+
+
+

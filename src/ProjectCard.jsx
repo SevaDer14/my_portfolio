@@ -3,12 +3,12 @@ import { Button, Card, Image } from "semantic-ui-react"
 
 const Buttons = ({ project }) => {
   if (project.weblink === '') {
-    return <Button id='buttonGithub'>Github</Button>
+    return <Button id='buttonGithub' href={project.github}>Github</Button>
   } 
   return (
   <>
-  <Button id='buttonGithub'>Github</Button>
-  <Button id='buttonWeblink'>Website</Button>
+  <Button id='buttonGithub' href={project.github}>Github</Button>
+  <Button id='buttonWeblink' href={project.weblink}>Website</Button>
   </>
     )
   }
