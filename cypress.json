@@ -1,3 +1,4 @@
 {
-  "chromeWebSecuirty": false
+  "baseUrl": "http://localhost:3000",
+  "chromeWebSecurity": false
 }
