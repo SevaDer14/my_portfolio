@@ -5,14 +5,14 @@
     "country": "Sweden",
     "phone": "+46793064348",
     "email": "vsevolod.deriushkin@gmail.com",
-    "github": "sevader14"
+    "github": "SevaDer14"
   },
   "work-experience": [
     {
-      "period": "2015 - 2020",
-      "title": "Junior Researcher",
-      "organisation": "Russian Academy of Science, Institute of Metal Physics, Laboratory of Semiconductors and Semimetals",
-      "place": "Yekaterinburg, Russia"
+      "period": "June - August 2011",
+      "title": "Lifeguard",
+      "organisation": "Wilderness Resort",
+      "place": "Wisconsin, USA"
     },
     {
       "period": "2013 - 2015",
@@ -21,15 +21,15 @@
       "place": "Yekaterinburg, Russia"
     },
     {
-      "period": "June - August 2011",
-      "title": "Lifeguard",
-      "organisation": "Wilderness Resort",
-      "place": "Wisconsin, USA"
-    }
+      "period": "2015 - 2020",
+      "title": "Junior Researcher",
+      "organisation": "Russian Academy of Science, Institute of Metal Physics, Laboratory of Semiconductors and Semimetals",
+      "place": "Yekaterinburg, Russia"
+    }    
   ],
   "education": [
     {
-      "degree": "B.S.",
+      "degree": "Bachelors",
       "period": "2009 - 2013",
       "city": "Yekaterinburg",
       "country": "Russia",
@@ -40,7 +40,7 @@
       "thesis": "Anomalous Hall effect in mercury selenide doped with 3d- transition metal impurities"
     },
     {
-      "degree": "M.S.",
+      "degree": "Masters",
       "period": "2013 - 2015",
       "city": "Yekaterinburg",
       "country": "Russia",
@@ -59,6 +59,6 @@
       "bootcamp": "Craft Academy",
       "sertificate": "...",
       "project": "..."
-    }
+    }    
   ]
 }
