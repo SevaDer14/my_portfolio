@@ -16,9 +16,9 @@ class CV extends Component {
 
   render () {
     const { sections } = this.state
-    debugger
+    
     return (
-      <p></p>
+      <h1 data-cy="cv-header">My CV</h1>
     );
   }
 }

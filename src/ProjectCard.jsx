@@ -23,7 +23,7 @@ const GenerateButtons = ({ project }) => {
 
 const ProjectCard = ({ project }) => {
   return (
-    <Card raised>
+    <Card raised data-cy={`project-${project.id}`}>
       <Image src={project.image} wrapped ui={false} />
       <Card.Content>
         <Card.Header>{project.name}</Card.Header>

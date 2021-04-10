@@ -16,7 +16,7 @@ class Projects extends Component {
 
   render() {
     const { projects } = this.state;
-    debugger
+    
     let projectsList = projects.map((project) => {
       return (        
           <ProjectCard data-cy={`project-${project.id}`} project={project} />        
@@ -29,9 +29,9 @@ class Projects extends Component {
           My Projects
         </h1>
 
-        <Grid centered>          
+        <Card.Group centered>          
           {projectsList}            
-        </Grid>        
+        </Card.Group>        
       </Container>
     );
   }
