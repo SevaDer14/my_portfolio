@@ -14,6 +14,12 @@ describe("User can see a list of projects", () => {
       );
       cy.get("[data-cy=button-weblink]").should("contain", "Website");
       cy.get("[data-cy=button-github]").should("contain", "Github");
+      cy.get("[data-cy=button-github]")
+        .should("have.attr", "href")
+        .and("equal", "https://github.com/SevaDer14/sevader14.github.io");
+      cy.get("[data-cy=button-weblink]")
+        .should("have.attr", "href")
+        .and("equal", "https://sevader14.github.io/");
     });
   });
 
@@ -26,6 +32,9 @@ describe("User can see a list of projects", () => {
         "Play FizzBuzz against computer. Answer time is limited so don't think for too long."
       );
       cy.get("[data-cy=button-github]").should("contain", "Github");
+      cy.get("[data-cy=button-github]")
+        .should("have.attr", "href")
+        .and("equal", "https://github.com/SevaDer14/fizz_buzz");
     });
   });
 
@@ -39,6 +48,12 @@ describe("User can see a list of projects", () => {
       );
       cy.get("[data-cy=button-github]").should("contain", "Github");
       cy.get("[data-cy=button-weblink]").should("contain", "Website");
+      cy.get("[data-cy=button-github]")
+        .should("have.attr", "href")
+        .and("equal", "https://github.com/SevaDer14/address_book/tree/master");
+      cy.get("[data-cy=button-weblink]")
+        .should("have.attr", "href")
+        .and("equal", "https://sevader14-address-book.netlify.app/");
     });
   });
 
@@ -51,6 +66,12 @@ describe("User can see a list of projects", () => {
         "App that lets you calculate your BMI and returns your health status"
       );
       cy.get("[data-cy=button-github]").should("contain", "Github");
+      cy.get("[data-cy=button-github]")
+        .should("have.attr", "href")
+        .and(
+          "equal",
+          "https://github.com/SevaDer14/bmi_calculator/tree/functionality"
+        );
     });
   });
 
@@ -63,6 +84,9 @@ describe("User can see a list of projects", () => {
         "Practiced making backend application in Ruby during the week 1 of Bootcamp"
       );
       cy.get("[data-cy=button-github]").should("contain", "Github");
+      cy.get("[data-cy=button-github]")
+        .should("have.attr", "href")
+        .and("equal", "https://github.com/SevaDer14/library-challenge");
     });
   });
 
@@ -75,67 +99,6 @@ describe("User can see a list of projects", () => {
         "Practiced making backend application in Ruby during the week 1 of Bootcamp"
       );
       cy.get("[data-cy=button-github]").should("contain", "Github");
-    });
-  });
-});
-
-describe("Buttons on Project Cards link to external resources", () => {
-  before(() => {
-    cy.visit("http://localhost:3000");
-    cy.get("[data-cy=projects-tab]").click();
-  });
-
-  it("checks the first projects links", () => {
-    cy.get("[data-cy=project-1]").within(() => {
-      cy.get("[data-cy=button-github]")
-        .should("have.attr", "href")
-        .and("equal", "https://github.com/SevaDer14/sevader14.github.io");
-      cy.get("[data-cy=button-weblink]")
-        .should("have.attr", "href")
-        .and("equal", "https://sevader14.github.io/");
-    });
-  });
-
-  it("checks the second projects links", () => {
-    cy.get("[data-cy=project-2]").within(() => {
-      cy.get("[data-cy=button-github]")
-        .should("have.attr", "href")
-        .and("equal", "https://github.com/SevaDer14/fizz_buzz");
-    });
-  });
-
-  it("checks the third projects links", () => {
-    cy.get("[data-cy=project-3]").within(() => {
-      cy.get("[data-cy=button-github]")
-        .should("have.attr", "href")
-        .and("equal", "https://github.com/SevaDer14/address_book/tree/master");
-      cy.get("[data-cy=button-weblink]")
-        .should("have.attr", "href")
-        .and("equal", "https://sevader14-address-book.netlify.app/");
-    });
-  });
-
-  it("checks the fourth projects links", () => {
-    cy.get("[data-cy=project-4]").within(() => {
-      cy.get("[data-cy=button-github]")
-        .should("have.attr", "href")
-        .and(
-          "equal",
-          "https://github.com/SevaDer14/bmi_calculator/tree/functionality"
-        );
-    });
-  });
-
-  it("checks the fifth projects links", () => {
-    cy.get("[data-cy=project-5]").within(() => {
-      cy.get("[data-cy=button-github]")
-        .should("have.attr", "href")
-        .and("equal", "https://github.com/SevaDer14/library-challenge");
-    });
-  });
-
-  it("checks the sixth projects links", () => {
-    cy.get("[data-cy=project-6]").within(() => {
       cy.get("[data-cy=button-github]")
         .should("have.attr", "href")
         .and("equal", "https://github.com/SevaDer14/library-challenge");
