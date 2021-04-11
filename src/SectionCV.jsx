@@ -5,13 +5,34 @@ const ToFitDataCy = (string) => {
   return string.replace(/\s+/g, '-').replace(':', '').toLowerCase()
 }
 
-const GetData = ({section}) => {   
-  let data = section.items[0].data 
- 
+const ListTitles = ({section}) => {
   return (
-    <div data-cy={`${ToFitDataCy(section.name)}`}>
-      {Object.keys(data).map((key) => <p data-cy={`${key}`}>{`${key}: ${data[key]}`}</p>)}
-    </div>
+  <>
+    {
+      section.items.map((item) => 
+        <Header as='h3' data-cy={ToFitDataCy(item.title)}>            
+          {`${item.title}`}
+        </Header>
+      )
+    }
+  </>  
+  )
+}
+
+
+
+const ListData = ({section}) => {   
+  let data = section.items[0].data 
+  return (
+    <>
+      {
+        section.items.map((item) =>
+          <div>
+            {Object.keys(item.data).map((key) => <p data-cy={`${key}`}>{`${key}: ${item.data[key]}`}</p>)}
+          </div>
+        )
+      }
+    </>
   )   
 }
 
@@ -22,14 +43,12 @@ const SectionCV = ({section}) => {
       <Header as='h2' data-cy={`${ToFitDataCy(section.name)}-header`}>
         {section.name}
       </Header>
-      <Grid columns={2} relaxed="very">
-        <Grid.Column>
-          <Header as='h3' data-cy={`${section.items[0].title}`}>            
-            {`${section.items[0].title}:`}
-          </Header>
+      <Grid columns='2' relaxed="very">
+        <Grid.Column>          
+          <ListTitles section={section} />
         </Grid.Column>
         <Grid.Column>                      
-            <GetData section={section}/>         
+            <ListData section={section}/>         
         </Grid.Column>
       </Grid>      
     </Container>
