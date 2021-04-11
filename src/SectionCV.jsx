@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Divider, Grid, Header, Segment } from "semantic-ui-react";
+import { Container, Grid, Header } from "semantic-ui-react";
 
 const ToFitDataCy = (string) => {
   return string.replace(/\s+/g, '-').replace(':', '').toLowerCase()

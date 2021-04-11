@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, CardGroup, Container, Divider, Grid, Header } from "semantic-ui-react";
+import { Card, CardGroup, Container, Divider, Header } from "semantic-ui-react";
 import ProjectCard from "./ProjectCard";
 import axios from "axios";
 

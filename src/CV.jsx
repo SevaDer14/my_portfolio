@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Segment, Divider, Header } from "semantic-ui-react";
+import { Container, Divider, Header } from "semantic-ui-react";
 import SectionCV from "./SectionCV"
 import axios from "axios";
 
