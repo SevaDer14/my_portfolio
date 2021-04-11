@@ -29,11 +29,11 @@ const ListData = ({ section }) => {
 const SectionCV = ({ section }) => {
   return (
     <Container text>      
-      <div style={{backgroundColor: 'rgb(230, 230, 230)'}}>
-      <Divider></Divider>
+      <div style={{backgroundColor: 'rgb(248, 248, 248)', paddingTop: '15px'}}>     
       <Header as="h2" data-cy={`${ToCebabCase(section.name)}-header`}>
         {`${section.name}:`}
       </Header>
+      <Divider></Divider>
       </div>
       
       <ListData section={section} />
