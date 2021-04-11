@@ -2,32 +2,32 @@
   {
     "id": 1,
     "name": "My First Website",
-    "image": "/img/my_first_website.png",
+    "image": "/img/my_first_site.jpg",
     "description": "Was practicing some HTML and CSS during the prep course",
     "weblink": "https://sevader14.github.io/",
     "github": "https://github.com/SevaDer14/sevader14.github.io"
-  },
+  },  
   {
     "id": 2,
     "name": "Impossible FizzBuzz",
-    "image": "",
-    "description": "",
+    "image": "/img/fizz_buzz.jpg",
+    "description": "Play FizzBuzz against computer. Answer time is limited so don't think for too long.",
     "weblink": "",
     "github": "https://github.com/SevaDer14/fizz_buzz"
   },
   {
     "id": 3,
     "name": "Address Book",
-    "image": "",
-    "description": "",
+    "image": "/img/address_book.jpg",
+    "description": "Simple app that lets you to save contacts. Practiced working with LocalStorage",
     "weblink": "https://sevader14-address-book.netlify.app/",
     "github": "https://github.com/SevaDer14/address_book/tree/master"
   },
   {
     "id": 4,
     "name": "BMI Calculator",
-    "image": "",
-    "description": "",
+    "image": "/img/bmi.jpg",
+    "description": "App that lets you calculate your BMI and returns your health status",
     "weblink": "",
     "github": "https://github.com/SevaDer14/bmi_calculator/tree/functionality"
   }, 
@@ -35,8 +35,16 @@
     "id": 5,
     "name": "Library Challenge",
     "image": "/img/library.jpg",
-    "description": "Practiced making backend application in Ruby during the week 1",
+    "description": "Practiced making backend application in Ruby during the week 1 of Bootcamp",
     "weblink": "",
     "github": "https://github.com/SevaDer14/library-challenge"
-  }
+  },
+  {
+    "id": 6,
+    "name": "ATM Challenge",
+    "image": "/img/atm.jpg",
+    "description": "Practiced making backend application in Ruby during the week 1 of Bootcamp",
+    "weblink": "",
+    "github": "https://github.com/SevaDer14/library-challenge"
+  }  
 ]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Personal Info",  
+    "items": [
+      {
+        "title": "Contact Information",
+        "data": {
+          "address": "Knektebacken 12",
+          "city": "Billdal",
+          "country": "Sweden",
+          "phone": "+46793064348",
+          "email": "vsevolod.deriushkin@gmail.com",
+          "github": "SevaDer14"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Work Experience",
+    "items": [
+      {
+        "title": "Lifeguard",
+        "data": {
+          "period": "June 2011 - August 2011",        
+          "organisation": "Wilderness Resort",
+          "place": "Wisconsin USA"
+        }
+      },    
+      {
+        "title": "Research Engineer",
+        "data": {
+          "period": "2013 - 2015",        
+          "organisation": "Russian Academy of Science, Institute of Metal Physics, Laboratory of Semiconductors and Semimetals",
+          "place": "Yekaterinburg Russia"
+        }
+      },
+      {
+        "title": "Junior Researcher",
+        "data": {
+          "period": "2015 - 2020",        
+          "organisation": "Russian Academy of Science, Institute of Metal Physics, Laboratory of Semiconductors and Semimetals",
+          "place": "Yekaterinburg Russia"
+        }
+      }
+    ]    
+  },
+  {
+    "name": "Education",
+    "items": [    
+      {
+        "title": "Bachelors",
+        "data": {
+          "period": "2009 - 2013",
+          "city": "Yekaterinburg",
+          "country": "Russia",
+          "speciality": "Computer Physics",
+          "university": "Ural Federal University",          
+          "thesis": "'Anomalous Hall effect in mercury selenide doped with 3d- transition metal impurities'"
+        }
+      },
+      {
+        "title": "Masters",
+        "data": {
+          "period": "2013 - 2015",
+          "city": "Yekaterinburg",
+          "country": "Russia",
+          "speciality": "Condenced Matter Physics",
+          "university": "Ural Federal University",          
+          "thesis": "'Anomalous galvanomagnetic properties of mercury selenide single crystals doped with low concentration of cobalt'"
+        }
+      },
+      {
+        "title": "Fullstack Web Developer",
+        "data": {
+          "period": "March 2021 - June 2021",
+          "city": "Gothenburg",
+          "country": "Sweden",
+          "speciality": "Web Development",
+          "bootcamp": "Craft Academy",
+          "sertificate": "...",
+          "project": "..."
+        }
+      }
+    ]    
+  }
+]

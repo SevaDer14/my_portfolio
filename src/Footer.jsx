@@ -1,12 +1,12 @@
-import React from 'react'
-//import { Container } from "semantic-ui-react";
+import React from "react";
+import { Segment } from "semantic-ui-react";
 
 const Footer = () => {
   return (
-    <footer>
-      <p id="footer">Made with Semantic UI for React {React.version}</p>
-    </footer>
-  )
-}
+    <Segment basic inverted color="blue" textAlign="center">
+      <p id="footer" data-cy="footer">Made with Semantic UI for React {React.version}</p>
+    </Segment>
+  );
+};
 
-export default Footer
+export default Footer;

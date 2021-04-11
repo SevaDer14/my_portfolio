@@ -1,15 +1,38 @@
-import React from 'react'
-import { Container } from 'semantic-ui-react'
+import React, { Component } from "react";
+import { Container, Segment, Divider, Header } from "semantic-ui-react";
+import SectionCV from "./SectionCV"
+import axios from "axios";
 
-const About = () => {
-  return (
-    <Container>
-    <h1 id='cv-header'> My CV</h1>
-    <p>
-      Here goes CV
-    </p>
-    </Container>
-  )
+class CV extends Component {
+  state = {
+    sections: [],
+  };
+  
+  componentDidMount() {
+    axios.get("./data/data-cv.json").then((response) => {
+      this.setState({ sections: response.data });
+    });
+  }
+
+  render () {
+    const { sections } = this.state
+    
+    let sectionList = sections.map((section) => {
+      return (        
+          <SectionCV data-cy={section.name.replace(/\s+/g, '-').toLowerCase()} section={section} />        
+      );
+    });
+
+    return (
+      <Container data-cy='cv'>
+        <Header as='h1' color='blue' data-cy="cv-header">My CV</Header>
+        <Divider/>
+        <p>{sectionList}</p>
+      </Container>
+    );
+  }
 }
 
-export default About
+
+
+export default CV;
