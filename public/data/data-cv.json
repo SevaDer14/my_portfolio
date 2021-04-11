@@ -1,6 +1,6 @@
 [
   {
-    "section": "Personal Info",  
+    "name": "Personal Info",  
     "data": [
       {
         "title": "Contact Information",
@@ -14,7 +14,7 @@
     ]
   },
   {
-    "section": "Work Experience",
+    "name": "Work Experience",
     "data": [
       {
         "title": "Lifeguard",
@@ -37,7 +37,7 @@
     ]    
   },
   {
-    "section": "Education",
+    "name": "Education",
     "data": [    
       {
         "title": "Bachelors",

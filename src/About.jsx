@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, Image } from "semantic-ui-react";
+import { Container, Grid, Image, Divider, Header } from "semantic-ui-react";
 
 const About = () => {
   return (
@@ -11,7 +11,8 @@ const About = () => {
           </p>
         </Grid.Column>
         <Grid.Column>
-          <h1 id="about-header" data-cy="about-header"> About Me</h1>
+          <Header as='h1' color='blue' id="about-header" data-cy="about-header"> About Me</Header>
+          <Divider/>
           <p id="about-me-paragraph" data-cy="about-me-paragraph" style={{ fontSize: "22px" }}>
           I'm a student in Craft Academy, on a way to becoming a junior developer. 
           I have a background in fundamental physics concirning semiconductor research. 

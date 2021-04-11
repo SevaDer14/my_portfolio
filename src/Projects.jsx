@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, CardGroup, Container, Divider, Grid } from "semantic-ui-react";
+import { Card, CardGroup, Container, Divider, Grid, Header } from "semantic-ui-react";
 import ProjectCard from "./ProjectCard";
 import axios from "axios";
 
@@ -25,9 +25,10 @@ class Projects extends Component {
 
     return (
       <Container>
-        <h1 style={{ marginBottom: "50px" }} data-cy="projects-header" id="projects-header">
+        <Header as='h1' color='blue' data-cy="projects-header" id="projects-header">
           My Projects
-        </h1>
+        </Header>
+        <Divider style={{ marginBottom: "50px" }}/>
 
         <Card.Group centered>          
           {projectsList}            
