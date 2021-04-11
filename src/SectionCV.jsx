@@ -1,17 +1,17 @@
 import React from "react";
 import { Container, Divider, Grid, Header, Segment } from "semantic-ui-react";
 
+const ToFitDataCy = (string) => {
+  return string.replace(/\s+/g, '-').replace(':', '').toLowerCase()
+}
+
 const GetData = ({section}) => {   
-  let output = JSON.stringify(section.items[0].data)
-  output = output.replace(/{/g, '')
-  output = output.replace(/}/g, '')
-  output = output.replace(/"/g, '')
-  output = output.replace(/:/g, ': ')
-  let result = output.split(',')
+  let data = section.items[0].data 
+ 
   return (
-    <>
-    {result.map(txt => <p>{txt}</p>)}
-    </>
+    <div data-cy={`${ToFitDataCy(section.name)}`}>
+      {Object.keys(data).map((key) => <p data-cy={`${key}`}>{`${key}: ${data[key]}`}</p>)}
+    </div>
   )   
 }
 
@@ -19,7 +19,7 @@ const SectionCV = ({section}) => {
   
   return (
     <Container text>      
-      <Header as='h2' data-cy='section-header'>
+      <Header as='h2' data-cy={`${ToFitDataCy(section.name)}-header`}>
         {section.name}
       </Header>
       <Grid columns={2} relaxed="very">

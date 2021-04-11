@@ -24,7 +24,7 @@ class CV extends Component {
     });
 
     return (
-      <Container>
+      <Container data-cy='cv'>
         <Header as='h1' color='blue' data-cy="cv-header">My CV</Header>
         <Divider/>
         <p>{sectionList}</p>
