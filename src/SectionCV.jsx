@@ -21,8 +21,7 @@ const ListTitles = ({section}) => {
 
 
 
-const ListData = ({section}) => {   
-  let data = section.items[0].data 
+const ListData = ({section}) => {  
   return (
     <>
       {

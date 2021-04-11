@@ -13,21 +13,21 @@ const Header = () => {
       <Menu ui secondary inverted compact menu size="large">
         <Menu.Item
           position="right"
-          id="about-tab" data-cy="about-tab"
+          id="about-tab"
           name="about me"
           data-cy="about-tab"
           as={NavLink}
           to={{ pathname: "/about" }}
         />
         <Menu.Item
-          id="projects-tab" data-cy="projects-tab"
+          id="projects-tab"
           name="my projects"
           data-cy="projects-tab"
           as={NavLink}
           to={{ pathname: "/projects" }}
         />
         <Menu.Item
-          id="cv-tab" data-cy="cv-tab"
+          id="cv-tab"
           name="my CV"
           data-cy="cv-tab"
           as={NavLink}
