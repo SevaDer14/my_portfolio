@@ -14,7 +14,11 @@ const GenerateButtons = ({ project }) => {
       <Button data-cy="button-github" id="button-github" href={project.github}>
         Github
       </Button>
-      <Button data-cy="button-weblink" id="button-weblink" href={project.weblink}>
+      <Button
+        data-cy="button-weblink"
+        id="button-weblink"
+        href={project.weblink}
+      >
         Website
       </Button>
     </>

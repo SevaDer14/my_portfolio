@@ -7,16 +7,29 @@ const About = () => {
       <Grid columns={2} relaxed="very">
         <Grid.Column>
           <p>
-            <Image id="photo-of-me" data-cy="photo-of-me" src="/img/Avatar.jpg" circular />
+            <Image
+              id="photo-of-me"
+              data-cy="photo-of-me"
+              src="/img/Avatar.jpg"
+              circular
+            />
           </p>
         </Grid.Column>
         <Grid.Column>
-          <Header as='h1' color='blue' id="about-header" data-cy="about-header"> About Me</Header>
-          <Divider/>
-          <p id="about-me-paragraph" data-cy="about-me-paragraph" style={{ fontSize: "22px" }}>
-          I'm a student in Craft Academy, on a way to becoming a junior developer. 
-          I have a background in fundamental physics concirning semiconductor research. 
-          As a hobby I play electric guitar, piano and compose music.
+          <Header as="h1" color="blue" id="about-header" data-cy="about-header">
+            {" "}
+            About Me
+          </Header>
+          <Divider />
+          <p
+            id="about-me-paragraph"
+            data-cy="about-me-paragraph"
+            style={{ fontSize: "22px" }}
+          >
+            I'm a student in Craft Academy, on a way to becoming a junior
+            developer. I have a background in fundamental physics concirning
+            semiconductor research. As a hobby I play electric guitar, piano and
+            compose music.
           </p>
         </Grid.Column>
       </Grid>

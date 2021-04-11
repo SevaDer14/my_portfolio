@@ -16,23 +16,26 @@ class Projects extends Component {
 
   render() {
     const { projects } = this.state;
-    
+
     let projectsList = projects.map((project) => {
-      return (        
-          <ProjectCard data-cy={`project-${project.id}`} project={project} />        
+      return (
+        <ProjectCard data-cy={`project-${project.id}`} project={project} />
       );
     });
 
     return (
       <Container>
-        <Header as='h1' color='blue' data-cy="projects-header" id="projects-header">
+        <Header
+          as="h1"
+          color="blue"
+          data-cy="projects-header"
+          id="projects-header"
+        >
           My Projects
         </Header>
-        <Divider style={{ marginBottom: "50px" }}/>
+        <Divider style={{ marginBottom: "50px" }} />
 
-        <Card.Group centered>          
-          {projectsList}            
-        </Card.Group>        
+        <Card.Group centered>{projectsList}</Card.Group>
       </Container>
     );
   }

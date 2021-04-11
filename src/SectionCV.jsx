@@ -1,57 +1,44 @@
 import React from "react";
-import { Container, Grid, Header } from "semantic-ui-react";
+import { Container, Divider, Grid, Header } from "semantic-ui-react";
 
-const ToFitDataCy = (string) => {
-  return string.replace(/\s+/g, '-').replace(':', '').toLowerCase()
-}
+const ToCebabCase = (string) => {
+  return string.replace(/\s+/g, "-").replace(":", "").toLowerCase();
+};
 
-const ListTitles = ({section}) => {
-  return (
-  <>
-    {
-      section.items.map((item) => 
-        <Header as='h3' data-cy={ToFitDataCy(item.title)}>            
-          {`${item.title}`}
-        </Header>
-      )
-    }
-  </>  
-  )
-}
-
-
-
-const ListData = ({section}) => {  
+const ListData = ({ section }) => {
   return (
     <>
-      {
-        section.items.map((item) =>
-          <div>
-            {Object.keys(item.data).map((key) => <p data-cy={`${key}`}>{`${key}: ${item.data[key]}`}</p>)}
-          </div>
-        )
-      }
+      {section.items.map((item) => (        
+        <Grid columns="2">
+          <Grid.Column textAlign='right' width='8'>            
+            <Header as="h3" data-cy={ToCebabCase(item.title)}>
+              {`${item.title}`}
+            </Header>   
+          </Grid.Column>
+          <Grid.Column>
+            {Object.keys(item.data).map((key) => (
+              <p data-cy={`${key}`}>{`${key}: ${item.data[key]}`}</p>
+            ))}
+          </Grid.Column>
+        </Grid>
+      ))}
     </>
-  )   
-}
+  );
+};
 
-const SectionCV = ({section}) => {
-  
+const SectionCV = ({ section }) => {
   return (
     <Container text>      
-      <Header as='h2' data-cy={`${ToFitDataCy(section.name)}-header`}>
-        {section.name}
+      <div style={{backgroundColor: 'rgb(230, 230, 230)'}}>
+      <Divider></Divider>
+      <Header as="h2" data-cy={`${ToCebabCase(section.name)}-header`}>
+        {`${section.name}:`}
       </Header>
-      <Grid columns='2' relaxed="very">
-        <Grid.Column>          
-          <ListTitles section={section} />
-        </Grid.Column>
-        <Grid.Column>                      
-            <ListData section={section}/>         
-        </Grid.Column>
-      </Grid>      
+      </div>
+      
+      <ListData section={section} />
     </Container>
-  )
-}
+  );
+};
 
-export default SectionCV
+export default SectionCV;

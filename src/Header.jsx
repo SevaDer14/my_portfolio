@@ -6,7 +6,12 @@ const Header = () => {
   return (
     <Segment basic inverted textAlign="center" color="blue">
       <div style={{ padding: "10px" }}>
-        <h1 id="my-name" data-cy="my-name" name="seva-deriushkin" style={{ fontSize: "38px" }}>
+        <h1
+          id="my-name"
+          data-cy="my-name"
+          name="seva-deriushkin"
+          style={{ fontSize: "38px" }}
+        >
           SEVA DERIUSHKIN
         </h1>
       </div>
