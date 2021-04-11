@@ -1,75 +1,85 @@
 [
   {
     "name": "Personal Info",  
-    "data": [
+    "items": [
       {
         "title": "Contact Information",
-        "address": "Knektebacken 12",
-        "city": "Billdal",
-        "country": "Sweden",
-        "phone": "+46793064348",
-        "email": "vsevolod.deriushkin@gmail.com",
-        "github": "SevaDer14"
+        "data": {
+          "address": "Knektebacken 12",
+          "city": "Billdal",
+          "country": "Sweden",
+          "phone": "+46793064348",
+          "email": "vsevolod.deriushkin@gmail.com",
+          "github": "SevaDer14"
+        }
       }
     ]
   },
   {
     "name": "Work Experience",
-    "data": [
+    "items": [
       {
         "title": "Lifeguard",
-        "period": "June - August 2011",        
-        "organisation": "Wilderness Resort",
-        "place": "Wisconsin, USA"
+        "data": {
+          "period": "June 2011 - August 2011",        
+          "organisation": "Wilderness Resort",
+          "place": "Wisconsin USA"
+        }
       },    
       {
         "title": "Research Engineer",
-        "period": "2013 - 2015",        
-        "organisation": "Russian Academy of Science, Institute of Metal Physics, Laboratory of Semiconductors and Semimetals",
-        "place": "Yekaterinburg, Russia"
+        "data": {
+          "period": "2013 - 2015",        
+          "organisation": "Russian Academy of Science, Institute of Metal Physics, Laboratory of Semiconductors and Semimetals",
+          "place": "Yekaterinburg Russia"
+        }
       },
       {
         "title": "Junior Researcher",
-        "period": "2015 - 2020",        
-        "organisation": "Russian Academy of Science, Institute of Metal Physics, Laboratory of Semiconductors and Semimetals",
-        "place": "Yekaterinburg, Russia"
+        "data": {
+          "period": "2015 - 2020",        
+          "organisation": "Russian Academy of Science, Institute of Metal Physics, Laboratory of Semiconductors and Semimetals",
+          "place": "Yekaterinburg Russia"
+        }
       }
     ]    
   },
   {
     "name": "Education",
-    "data": [    
+    "items": [    
       {
         "title": "Bachelors",
-        "period": "2009 - 2013",
-        "city": "Yekaterinburg",
-        "country": "Russia",
-        "speciality": "Computer Physics",
-        "university": "Ural Federal University",
-        "institute": "Institute of Natural Sciencies",
-        "faculty": "Faculty of Physics",
-        "thesis": "Anomalous Hall effect in mercury selenide doped with 3d- transition metal impurities"
+        "data": {
+          "period": "2009 - 2013",
+          "city": "Yekaterinburg",
+          "country": "Russia",
+          "speciality": "Computer Physics",
+          "university": "Ural Federal University",          
+          "thesis": "'Anomalous Hall effect in mercury selenide doped with 3d- transition metal impurities'"
+        }
       },
       {
         "title": "Masters",
-        "period": "2013 - 2015",
-        "city": "Yekaterinburg",
-        "country": "Russia",
-        "speciality": "Condenced Matter Physics",
-        "university": "Ural Federal University",
-        "institute": "Institute of Natural Sciencies",
-        "faculty": "Faculty of Physics",
-        "thesis": "Anomalous galvanomagnetic properties of mercury selenide single crystals doped with low concentration of cobalt"
+        "data": {
+          "period": "2013 - 2015",
+          "city": "Yekaterinburg",
+          "country": "Russia",
+          "speciality": "Condenced Matter Physics",
+          "university": "Ural Federal University",          
+          "thesis": "'Anomalous galvanomagnetic properties of mercury selenide single crystals doped with low concentration of cobalt'"
+        }
       },
       {
         "title": "Fullstack Web Developer",
-        "period": "March - June 2021",
-        "city": "Gothenburg",
-        "country": "Sweden",
-        "speciality": "Web Development",
-        "bootcamp": "Craft Academy",
-        "sertificate": "...",
-        "project": "..."
+        "data": {
+          "period": "March 2021 - June 2021",
+          "city": "Gothenburg",
+          "country": "Sweden",
+          "speciality": "Web Development",
+          "bootcamp": "Craft Academy",
+          "sertificate": "...",
+          "project": "..."
+        }
       }
     ]    
   }
