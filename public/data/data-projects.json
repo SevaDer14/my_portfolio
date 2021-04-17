@@ -1,5 +1,13 @@
 [
   {
+    "id": 0,
+    "name": "Wather App",
+    "image": "/img/weather_app_card_image.jpg",
+    "description": "Displays current weather in your location and shows 48 hour temperature forecast",
+    "weblink": "https://sevader14-weather-app.netlify.app/",
+    "github": "https://github.com/SevaDer14/weather_app_challenge"
+  },
+  {
     "id": 1,
     "name": "My First Website",
     "image": "/img/my_first_site.jpg",
